@@ -6,7 +6,7 @@ import { extractBibTeXId, replaceBibTeXId, citeRegex, updateCiteCommands } from 
 import TextPanel from "./components/TextPanel";
 import CitationPanel from "./components/CitationPanel";
 
-const AutociteWebsite = () => {
+const Autocite = () => {
   const [activeTab, setActiveTab] = useState("Text");
   const [textContent, setTextContent] = useState("");
   const [bibContent, setBibContent] = useState("");
@@ -305,4 +305,4 @@ const AutociteWebsite = () => {
   );
 };
 
-export default AutociteWebsite;
+export default Autocite;
