@@ -1,38 +1,153 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap');
+
+:root {
+  --color-primary: #4b5563;
+  --color-secondary: #e5e7eb;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Source Sans Pro', sans-serif;
+}
+
+.autocite-container {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.autocite-main {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 75px;
+}
+
+.autocite-panel {
+  width: 50%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: 20px;
+}
+
+.panel-header.right {
+  width: 100%;
+  font-size: 16px;
+}
+
+.autocite-tab-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.autocite-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.autocite-tab {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background-color: white;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  align-items: center;
+}
+
+.autocite-tab.active {
+  color: white;
+  background-color: var(--color-primary);
+}
+
+.panel-header.right .autocite-tab {
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.autocite-textarea-container {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.autocite-textarea {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-secondary);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.autocite-textarea:focus {
+  outline: 1px solid var(--color-primary);
+  outline-offset: -1px;
+}
+
+.autocite-placeholder {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-primary);
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-results-base {
+  height: 40%;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  padding: 0.25rem;
+  border: 1px solid var(--color-secondary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-results-focused {
+  outline: 1px solid var(--color-primary);
+  outline-offset: -1px;
+}
+
+.search-result {
+  padding: 0.25rem;
+  cursor: pointer;
+  font-size: 0.825rem;
+}
+
+.search-result:hover, .search-result.selected {
+  background-color: var(--color-secondary);
+}
+
+.bibtex-citation {
+  height: 60%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bibtex-citation .autocite-textarea {
+  flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error-message {
+  padding: 0.25rem;
+  color: red;
+  font-size: 0.875rem;
+}
+
+.loading-message {
+  padding: 0.25rem;
+  font-size: 0.875rem;
 }
