@@ -8,8 +8,8 @@ to run this project locally:
 
 1. clone the repo:
    ```
-   git clone https://github.com/advaitgosai/autocite-website.git
-   cd autocite-website
+   git clone https://github.com/advaitgosai/autocite.git
+   cd autocite
    ```
 
 2. install dependencies:
