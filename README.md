@@ -31,6 +31,7 @@ contributions are welcome, anything from a star to submitting a PR.
 
 ideas:
 - llm mode to avoid api downtime or just to see how it does 
+- cli / chrome extension / any other form
 - auto standardize conference/journal/author names in a user pasted bib
 - code formatter for the tex editor 
 - full on rendering + collab?
